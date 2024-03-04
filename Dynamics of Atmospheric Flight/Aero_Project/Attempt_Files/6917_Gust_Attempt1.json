@@ -1,0 +1,109 @@
+{
+	"tag": {
+		"UUID": "0FB038F3-7A5B-4C95-BA42-75FCB9CBBE49",
+		"date": "2024-03-04T20:11:34.464Z",
+		"version": "MachUp 4.0"
+	},
+	"simulation": {
+		"constant_density": false,
+		"time_step[sec]": 0.05,
+		"total_time[sec]": 250,
+		"ground_altitude[ft]": 4711
+	},
+	"aircraft": {
+		"wing_area[ft^2]": 6.75,
+		"wing_span[ft]": 12,
+		"weight[lbf]": 1.1013,
+		"Ixx[slug-ft^2]": 0.0708,
+		"Iyy[slug-ft^2]": 0.0527,
+		"Izz[slug-ft^2]": 0.1196,
+		"Ixy[slug-ft^2]": 0,
+		"Ixz[slug-ft^2]": 0.0023,
+		"Iyz[slug-ft^2]": 0,
+		"hx[slug-ft^2/s]": 0,
+		"hy[slug-ft^2/s]": 0,
+		"hz[slug-ft^2/s]": 0
+	},
+	"initial": {
+		"airspeed[ft/s]": 12.56,
+		"altitude[ft]": 4761,
+		"heading[deg]": 0,
+		"type": "state",
+		"state": {
+			"elevation_angle[deg]": 0,
+			"bank_angle[deg]": 0,
+			"alpha[deg]": 0,
+			"beta[deg]": 0,
+			"p[deg/s]": 0,
+			"q[deg/s]": 0,
+			"r[deg/s]": 0,
+			"aileron[deg]": 0,
+			"elevator[deg]": 0,
+			"rudder[deg]": 0,
+			"throttle": 0
+		}
+	},
+	"aerodynamics": {
+		"ground_effect": {
+			"use_ground_effect": true,
+			"taper_ratio": 1
+		},
+		"gust_magnitude[ft/s]": 2,
+		"stall": {
+			"use_stall_model": true,
+			"alpha_blend[deg]": 10.7,
+			"blending_factor": 40
+		},
+		"CL": {
+			"0": 0.836155773463954,
+			"alpha": 5.79136696313684,
+			"alpha_hat": 0.7557,
+			"qbar": 2.96848452838945,
+			"de": 0
+		},
+		"CS": {
+			"beta": -0.375194320276748,
+			"pbar": -0.3204085115389328,
+			"Lpbar": -0.044810916632675044,
+			"rbar": 0.348332863479731,
+			"da": 0,
+			"dr": 0
+		},
+		"CD": {
+			"L0": 0.015329937443144762,
+			"L": -0.010380750292986352,
+			"L2": 0.026946107319618946,
+			"S2": 1.3430110380136107,
+			"qbar": 0.11073758830602255,
+			"Lqbar": 0.19972284734851098,
+			"L2qbar": -0.13099470815209086,
+			"de": 0,
+			"Lde": 0,
+			"de2": 0
+		},
+		"Cl": {
+			"beta": -0.152455012206679,
+			"pbar": -0.643383118452137,
+			"rbar": 0.1264865119929608,
+			"Lrbar": 0.24393836893781085,
+			"da": 0,
+			"dr": 0
+		},
+		"Cm": {
+			"0": 0.000043927513981635,
+			"alpha": -1.99157570585436,
+			"alpha_hat": -1.9067,
+			"qbar": -20.2280014479313,
+			"de": 0
+		},
+		"Cn": {
+			"beta": 0.0564609490992076,
+			"pbar": 0.07182404060883149,
+			"Lpbar": -0.1810905430633355,
+			"rbar": -0.0541319061579999,
+			"da": 0,
+			"Lda": 0,
+			"dr": 0
+		}
+	}
+}
