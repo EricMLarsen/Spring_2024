@@ -9,7 +9,7 @@
 	"aircraft": {
 		"wing_area[ft^2]": 6.75,
 		"wing_span[ft]": 12,
-		"weight[lbf]": 0,
+		"weight[lbf]": 0.80526		,
 		"Ixx[slug-ft^2]": 2.6735379695892334,
 		"Iyy[slug-ft^2]": 1.2433301210403442,
 		"Izz[slug-ft^2]": 3.798083782196045,
