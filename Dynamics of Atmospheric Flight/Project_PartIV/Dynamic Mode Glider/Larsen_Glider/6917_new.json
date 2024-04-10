@@ -22,7 +22,7 @@
 		"name": "Glidezilla"
 	},
 	"initial": {
-		"airspeed[ft/s]": 15.8573,
+		"airspeed[ft/s]": 15.8574,
 		"altitude[ft]": 4761,
 		"heading[deg]": 0,
 		"type": "state",
