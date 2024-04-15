@@ -66,16 +66,26 @@ Air_Density = J_vals['analysis']['density[slugs/ft^3]']
 
 #################  Aerodynamic Properties  #################################
 
+#Need to change,
+# CY_pbar(done), CD_qbar(done), Cl_rbar(done), Cn_pbar
+
+#Angle of attack
+alpha = J_vals['initial']['state']['alpha[deg]'] *(np.pi/180)
+
 #CL values
 CL_0 = J_vals['aerodynamics']['CL']['0']
 CL_alpha = J_vals['aerodynamics']['CL']['alpha']
 CL_qbar = J_vals['aerodynamics']['CL']['qbar']
 CL_alpha_hat = J_vals['aerodynamics']['CL']['alpha_hat']
+CL_1 = CL_0 + CL_alpha*alpha
 
 #CY values
 CY_beta = J_vals['aerodynamics']['CS']['beta']
-CY_pbar = J_vals['aerodynamics']['CS']['pbar']
+#CY_pbar = J_vals['aerodynamics']['CS']['pbar']
 CY_rbar = J_vals['aerodynamics']['CS']['rbar']
+#Changed for part V, original is now commented out
+#new Cy_pbar
+CY_pbar = J_vals['aerodynamics']['CS']['Lpbar']*CL_1 + J_vals['aerodynamics']['CS']['pbar']
 
 #CD values
 CD_L0 = J_vals['aerodynamics']['CD']['L0']
@@ -83,12 +93,18 @@ CD_L1 = J_vals['aerodynamics']['CD']['L']
 CD_L2 = J_vals['aerodynamics']['CD']['L2']
 CD_0 = CD_L0 + CD_L1*CL_0+CD_L2*CL_0**2
 CD_alpha = CD_L1*CL_alpha + 2*CD_L2*CL_0*CL_alpha
-CD_qbar = J_vals['aerodynamics']['CD']['qbar']
+#CD_qbar = J_vals['aerodynamics']['CD']['qbar']
+#New CD qbar
+CD_qbar = J_vals['aerodynamics']['CD']['qbar'] + J_vals['aerodynamics']['CD']['Lqbar']*CL_1 + J_vals['aerodynamics']['CD']['L2qbar']*CL_1**2
+
 
 #Cl Values
 Cl_beta = J_vals['aerodynamics']['Cl']['beta']
 Cl_pbar = J_vals['aerodynamics']['Cl']['pbar']
-Cl_rbar = J_vals['aerodynamics']['Cl']['rbar']
+#Cl_rbar = J_vals['aerodynamics']['Cl']['rbar']
+#New Cl_rbar
+Cl_rbar = J_vals['aerodynamics']['Cl']['Lrbar']*CL_1 + J_vals['aerodynamics']['Cl']['rbar']
+
 
 #Cm Values
 Cm_0 = J_vals['aerodynamics']['Cm']['0']
@@ -98,8 +114,10 @@ Cm_alpha_hat = J_vals['aerodynamics']['Cm']['alpha_hat']
 
 #Cn values
 Cn_beta = J_vals['aerodynamics']['Cn']['beta']
-Cn_pbar = J_vals['aerodynamics']['Cn']['pbar']
 Cn_rbar = J_vals['aerodynamics']['Cn']['rbar']
+#Cn_pbar = J_vals['aerodynamics']['Cn']['pbar']
+#New Cn_pbar
+Cn_pbar = J_vals['aerodynamics']['Cn']['pbar'] + J_vals['aerodynamics']['Cn']['Lpbar']*CL_1
 
 #################  Solved Variables ############################################
 
