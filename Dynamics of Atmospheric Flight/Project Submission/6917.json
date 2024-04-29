@@ -1,0 +1,109 @@
+{
+	"tag": {},
+	"simulation": {
+		"constant_density": false,
+		"time_step[sec]": 0.05,
+		"total_time[sec]": 250,
+		"ground_altitude[ft]": 4711
+	},
+	"aircraft": {
+		"wing_area[ft^2]": 6.5625,
+		"wing_span[ft]": 12.5,
+		"weight[lbf]": 0.7871061038574173,
+		"Ixx[slug-ft^2]": 0.0592234767973423,
+		"Iyy[slug-ft^2]": 0.06740730255842209,
+		"Izz[slug-ft^2]": 0.11730800569057465,
+		"Ixy[slug-ft^2]": -5.378096318657965e-18,
+		"Ixz[slug-ft^2]": 0.001854020170867443,
+		"Iyz[slug-ft^2]": -3.024066013860459e-20,
+		"hx[slug-ft^2/s]": 0,
+		"hy[slug-ft^2/s]": 0,
+		"hz[slug-ft^2/s]": 0,
+		"name": "Glidezilla"
+	},
+	"analysis" : {
+		"density[slugs/ft^3]" : 0.002048
+	},
+	"initial": {
+		"airspeed[ft/s]": 13.228,
+		"altitude[ft]": 4761,
+		"heading[deg]": 0,
+		"type": "state",
+		"state": {
+			"elevation_angle[deg]": 0,
+			"bank_angle[deg]": 0,
+			"alpha[deg]": 0,
+			"beta[deg]": 0,
+			"p[deg/s]": 0,
+			"q[deg/s]": 0,
+			"r[deg/s]": 0,
+			"aileron[deg]": 0,
+			"elevator[deg]": 0,
+			"rudder[deg]": 0,
+			"throttle": 0
+		}
+	},
+	"aerodynamics": {
+		"ground_effect": {
+			"use_ground_effect": true,
+			"taper_ratio": 1
+		},
+		"gust_magnitude[ft/s]": 2,
+		"stall": {
+			"use_stall_model": true,
+			"alpha_blend[deg]": 10.8,
+			"blending_factor": 40
+		},
+		"CL": {
+			"0": 0.874468159176983,
+			"alpha": 5.77895550222956,
+			"alpha_hat": 0.7557,
+			"qbar": -1.24490516313209,
+			"de": 0
+		},
+		"CS": {
+			"beta": -0.685694937509146,
+			"pbar": -0.5694044991615445,
+			"Lpbar": -0.06543664639406889,
+			"rbar": 0.462982765621289,
+			"da": 0,
+			"dr": 0
+		},
+		"CD": {
+			"L0": 0.012855925245496318,
+			"L": -0.007546501315798773,
+			"L2": 0.027579214254294424,
+			"S2": 0.5419585059892205,
+			"qbar": 0.10231144170040865,
+			"Lqbar": 0.5871488192071522,
+			"L2qbar": -0.27721609648644296,
+			"de": 0,
+			"Lde": 0,
+			"de2": 0
+		},
+		"Cl": {
+			"beta": -0.285615550230067,
+			"pbar": -0.611103727723306,
+			"rbar": 0.10251352267177007,
+			"Lrbar": 0.222959544927281,
+			"da": 0,
+			"dr": 0
+		},
+		"Cm": {
+			"0": 0.0000363451326770887,
+			"alpha": -1.73455105838682,
+			"alpha_hat": -1.9067,
+			"qbar": -23.7446343184934,
+			"de": 0
+		},
+		"Cn": {
+			"beta": 0.0386849290954465,
+			"pbar": 0.06446871725468487,
+			"Lpbar": -0.16860800607194723,
+			"rbar": -0.0457947904874399,
+			"da": 0,
+			"Lda": 0,
+			"dr": 0
+		}
+	}
+}
